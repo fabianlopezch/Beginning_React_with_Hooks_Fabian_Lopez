@@ -20,15 +20,19 @@ function App() {
   return (
     <div>
       <h1>Hello, {formatName(user)}</h1>
-      <br />
+      {/*
       <img src={user.imageURL} />
+      */}
+      <br />
       <Products />
-      <Button variant="primary" disabled={!isValid}>Default</Button>
+      <Button variant="primary" disabled={!isValid}>Search</Button>
+      {/*
       <Rating rating="1" />
       <Rating rating="2" />
       <Rating rating="3" />
       <Rating rating="4" />
       <Rating rating="5" />
+      */}
     </div>
   );
 }

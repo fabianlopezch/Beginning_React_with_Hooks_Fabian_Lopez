@@ -6,8 +6,7 @@ function Rating(props) {
     const [rating, setRating] = useState(props.rating);
 
     return (
-        <div>
-            <h2>Rating: {rating}</h2>
+        <div style={styles.starStyle}>
             {
                 (rating >= 1) ?
                 (<IoIosStar onClick={() => setRating(1)} />) :
@@ -38,3 +37,9 @@ function Rating(props) {
 }
 
 export default Rating;
+
+const styles = {
+    starStyle: {
+        color:'orange'
+    }
+}

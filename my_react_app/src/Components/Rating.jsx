@@ -1,32 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 
 function Rating(props) {
+
+    const [rating, setRating] = useState(props.rating);
+
     return (
         <div>
-            <h2>Rating: {props.rating}</h2>
+            <h2>Rating: {rating}</h2>
             {
-                (props.rating >= 1) ?
+                (rating >= 1) ?
                 (<IoIosStar />) :
                 (<IoIosStarOutline />)
             }
             {
-                (props.rating >= 2) ?
+                (rating >= 2) ?
                 (<IoIosStar />) :
                 (<IoIosStarOutline />)
             }
             {
-                (props.rating >= 3) ?
+                (rating >= 3) ?
                 (<IoIosStar />) :
                 (<IoIosStarOutline />)
             }
             {
-                (props.rating >= 4) ?
+                (rating >= 4) ?
                 (<IoIosStar />) :
                 (<IoIosStarOutline />)
             }
             {
-                (props.rating >= 5) ?
+                (rating >= 5) ?
                 (<IoIosStar />) :
                 (<IoIosStarOutline />)
             }

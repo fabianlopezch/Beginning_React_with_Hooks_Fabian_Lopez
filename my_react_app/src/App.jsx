@@ -1,5 +1,6 @@
 import React from "react";
 import Products from "./Components/Products";
+import Button from "react-bootstrap/Button"
 
 function formatName(user){
   return user.firstName + ' ' + user.lastName;
@@ -19,6 +20,7 @@ function App() {
       <br />
       <img src={user.imageURL} />
       <Products />
+      <Button>Default</Button>
     </div>
   );
 }

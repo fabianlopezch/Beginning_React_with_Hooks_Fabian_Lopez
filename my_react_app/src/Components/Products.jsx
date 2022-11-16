@@ -39,9 +39,22 @@ function Products() {
             <Product key={product.productName} data={product}/>
         );
 
+    // listProducts.length = 0; // Uncomment to check the message for 
+                                // the case where there are no products
+                                // to display.
+
     return (
         <div>
-            <ul>{listProducts}</ul>
+            {
+                listProducts.length > 0 && 
+                <ul>{listProducts}</ul>
+            }
+            {
+                listProducts.length == 0 && 
+                <ul>No products to display</ul>
+            }
+
+            
         </div>
     );
 }

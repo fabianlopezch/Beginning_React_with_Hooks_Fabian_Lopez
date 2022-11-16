@@ -14,13 +14,15 @@ function App() {
     imageURL: "https://picsum.photos/300/250"
   };
 
+  const isValid = false;
+
   return (
     <div>
       <h1>Hello, {formatName(user)}</h1>
       <br />
       <img src={user.imageURL} />
       <Products />
-      <Button variant="danger">Default</Button>
+      <Button variant="primary" disabled={!isValid}>Default</Button>
     </div>
   );
 }

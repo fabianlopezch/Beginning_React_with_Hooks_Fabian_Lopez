@@ -20,7 +20,7 @@ function App() {
       <br />
       <img src={user.imageURL} />
       <Products />
-      <Button>Default</Button>
+      <Button variant="danger">Default</Button>
     </div>
   );
 }

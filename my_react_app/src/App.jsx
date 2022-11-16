@@ -9,12 +9,15 @@ function App() {
 
   const user = {
     firstName: "Fabian Marcelo",
-    lastName: "Lopez Chamorro"
+    lastName: "Lopez Chamorro",
+    imageURL: "https://picsum.photos/300/250"
   };
 
   return (
     <div>
       <h1>Hello, {formatName(user)}</h1>
+      <br />
+      <img src={user.imageURL} />
       <Products />
     </div>
   );

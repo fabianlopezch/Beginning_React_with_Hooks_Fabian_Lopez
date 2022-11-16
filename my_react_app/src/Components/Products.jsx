@@ -1,4 +1,5 @@
 import React from "react";
+import Product from "./Product";
 
 function Products() {
 
@@ -32,9 +33,15 @@ function Products() {
         ];
     };
 
+    const products = getProducts(); // "Receiving" data from server
+
+    const listProducts = products.map( (product) =>
+            <Product key={product.productName} data={product}/>
+        );
+
     return (
         <div>
-            
+            <ul>{listProducts}</ul>
         </div>
     );
 }

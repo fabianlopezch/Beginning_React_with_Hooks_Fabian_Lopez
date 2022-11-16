@@ -32,6 +32,7 @@ function Rating(props) {
                 (<IoIosStar onClick={() => setRating(5)} />) :
                 (<IoIosStarOutline onClick={() => setRating(5)} />)
             }
+            {props.numOfReviews}
         </div>
     );
 }

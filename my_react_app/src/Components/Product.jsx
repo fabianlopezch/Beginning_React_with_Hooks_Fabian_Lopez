@@ -1,6 +1,8 @@
 import React from "react";
+import Rating from "./Rating";
+import { Media } from 'react-bootstrap';
 
-const Product = () => {
+const Product = (props) => {
     return (
         <div>
             <Media>
@@ -8,16 +10,17 @@ const Product = () => {
                     width={64}
                     height={64}
                     className="mr-3"
-                    src="holder.js/64x64"
-                    alt="Generic placeholder"
+                    src={props.data.imageUrl}
+                    alt="Image"
                 />
                 <Media.Body>
-                    <h5>Media Heading</h5>
+                    <h5>{props.data.productName}</h5>
+                    {props.data.releaseDate}
+                    <Rating 
+                        rating={props.data.rating} numOfReviews={props.data.numOfReviews}                    
+                    />
                     <p>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-                    ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-                    tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-                    Donec lacinia congue felis in faucibus.
+                        {props.data.description}
                     </p>
                 </Media.Body>
             </Media>

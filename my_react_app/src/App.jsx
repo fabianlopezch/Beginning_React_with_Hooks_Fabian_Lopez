@@ -20,7 +20,10 @@ function App() {
 
   return (
     <div>
-      <JumbotronComponent />
+      <JumbotronComponent>
+        This is a long sentence and I want to insert content
+        into the jumbotron component from the outside.
+      </JumbotronComponent>
       <h1>Hello, {formatName(user)}</h1>
       {/*
       <img src={user.imageURL} />

@@ -46,15 +46,10 @@ function Products() {
     return (
         <div>
             {
-                listProducts.length > 0 && 
-                <ul>{listProducts}</ul>
-            }
-            {
-                listProducts.length == 0 && 
+                listProducts.length > 0 ? 
+                <ul>{listProducts}</ul> :
                 <ul>No products to display</ul>
-            }
-
-            
+            }            
         </div>
     );
 }

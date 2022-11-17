@@ -2,6 +2,7 @@ import React from "react";
 import Products from "./Components/Products";
 import Button from "react-bootstrap/Button"
 import Rating from "./Components/Rating";
+import JumbotronComponent from "./Components/JumbotronComponent";
 
 function formatName(user){
   return user.firstName + ' ' + user.lastName;
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div>
+      <JumbotronComponent />
       <h1>Hello, {formatName(user)}</h1>
       {/*
       <img src={user.imageURL} />
